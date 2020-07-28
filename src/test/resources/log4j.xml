@@ -1,0 +1,41 @@
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="console"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileAppender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="target/logs/testcases.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="frameworkAppender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="output/logs/framework.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- <logger name="com.progress.selframework" additivity="false">
+		<appender-ref ref="console" />
+		<appender-ref ref="frameworkAppender" />
+	</logger> -->
+
+	<root>
+		<priority value="trace"></priority>
+		<appender-ref ref="console" />
+		<appender-ref ref="fileAppender" />
+	</root>
+
+</log4j:configuration>

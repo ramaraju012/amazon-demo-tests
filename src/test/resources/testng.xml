@@ -1,0 +1,21 @@
+<suite name="AndroidSuite" verbose="10">
+	<listeners>
+		<listener class-name="com.demo.testng.CustomListener" />
+	</listeners>
+	
+	<test name="Demo">
+		<parameter name="platform" value="android" />
+		<parameter name="platformVersion" value="9" />
+		<parameter name="deviceName" value="JCAAGF04641562J" />
+		<parameter name="automationName" value="UiAutomator2" />
+		<parameter name="nodeUrl" value="http://127.0.0.1:4723/wd/hub" />
+		
+		<classes>
+			<class name="com.demo.test.TestCase">
+				<methods>
+					<include name="demoTestCase1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
