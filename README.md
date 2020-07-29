@@ -16,4 +16,6 @@ src/test/resources/testng.xml (for configuring test cases that need to be run an
 src/test/resources/Amazon_shopping.apk (When a new version of app is ready, replace old app with new app) <br>
 
 # How to run test cases?
-clone the git repo and run 'mvn clean install' command.
+1) clone the git repo
+2) Open testng.xml and configure execution parameters like devicename, platform version, etc
+3) run 'mvn clean install' command.
