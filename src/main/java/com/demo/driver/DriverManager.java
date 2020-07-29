@@ -41,8 +41,6 @@ public class DriverManager {
 			capabilities.setCapability("automationName", automationName);
 			capabilities.setCapability("app", System.getProperty("user.dir") + File.separator + "src" + File.separator
 					+ "test" + File.separator + "resources" + File.separator + Constants.APP_NAME);
-			// capabilities.setCapability("appPackage", Constants.APP_PACKAGE);
-			// capabilities.setCapability("appActivity", Constants.APP_ACTIVITY);
 			driver = new AndroidDriver(new URL(nodeUrl), capabilities);
 			LOGGER.info("New Android driver instance created");
 		} else if (platform.equalsIgnoreCase(Constants.IOS_PLATFORM)) {

@@ -105,12 +105,6 @@ public class RetailSearchActivity {
 		Assert.assertEquals(lbl_ProductTitle.getText(), testData.get("ProductTitle").toString());
 		LOGGER.trace("Actual product reviews: " + lbl_ProductReviews.getText() + " and Expected product reviews: "
 				+ testData.get("ProductReviews").toString());
-		// Commenting this assertion as for some products, reviews are displaying
-		// incorrectly in search results and product desc
-		/*
-		 * Assert.assertEquals(lbl_ProductReviews.getText().substring(0, 3),
-		 * testData.get("ProductReviews").toString().substring(0, 3));
-		 */
 		DriverUtils.sleep(Constants.WAIT_2_SEC);
 		DriverUtils.scrollTillElement(driver, lbl_ProductPrice, 5);
 		// format the price data to match with the expected data
